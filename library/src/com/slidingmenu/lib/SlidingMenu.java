@@ -379,7 +379,7 @@ public class SlidingMenu extends RelativeLayout {
 	 * @param animate true to animate the transition, false to ignore animation
 	 */
 	public void showBehind(boolean animate) {
-		mViewAbove.setCurrentItem(2, animate);
+		mViewAbove.setCurrentItem(0, animate);
 	}
 
 	/**
@@ -424,7 +424,7 @@ public class SlidingMenu extends RelativeLayout {
 	 * @return Whether or not the behind view is showing
 	 */
 	public boolean isBehindShowing() {
-		return mViewAbove.getCurrentItem() == 0;
+		return mViewAbove.getCurrentItem() == 0 || mViewAbove.getCurrentItem() == 2;
 	}
 
 	/**
